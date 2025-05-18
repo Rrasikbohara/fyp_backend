@@ -13,8 +13,8 @@ const createMailTransporter = () => {
   return nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.EMAIL_USER || 'imrajesh2005@gmail.com',
-      pass: process.env.EMAIL_PASS || 'your-app-password'
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS 
     }
   });
 };
@@ -29,7 +29,7 @@ const sendOTPEmail = async (to, otp, purpose = 'verification') => {
   try {
     // Always send admin OTPs to the configured admin email
     const finalRecipient = purpose === 'admin_login' 
-      ? (process.env.ADMIN_EMAIL || 'imrajesh2005@gmail.com')
+      ? (process.env.ADMIN_EMAIL)
       : to;
     
     console.log(`Sending OTP to ${finalRecipient} for ${purpose}`);
