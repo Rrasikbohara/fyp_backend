@@ -7,7 +7,7 @@ const authMiddleware = require('../middleware/authMiddleware');
 
 // Environment variables
 const KHALTI_SECRET_KEY = process.env.KHALTI_SECRET_KEY// Use the specific key provided
-const BASE_URL = process.env.FRONTEND_URL; // Frontend URL
+const BASE_URL = "https://fyp-backend-6nbm.onrender.com";
 
 
 // API base URLs for Khalti
