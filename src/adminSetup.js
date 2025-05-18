@@ -51,7 +51,7 @@ async function setupAdmin() {
       await Admin.create({
         username: 'admin', 
         password: hashedPassword,
-        email: 'imrajesh2005@gmail.com',
+        email: 'ryderrasik1@gmail.com',
         role: 'super_admin'
       });
       
@@ -69,7 +69,7 @@ async function setupAdmin() {
       await Admin.create({
         username: 'gym123', 
         password: hashedPassword,
-        email: 'imrajesh2005@gmail.com',
+        email: 'ryderrasik1@gmail.com',
         role: 'admin'
       });
       
