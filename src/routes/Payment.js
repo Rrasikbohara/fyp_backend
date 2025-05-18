@@ -7,13 +7,11 @@ const authMiddleware = require('../middleware/authMiddleware');
 
 // Environment variables
 const KHALTI_SECRET_KEY = '01b5de2f517742d5886ff473a1e9d794'; // Use the specific key provided
-const BASE_URL = process.env.BASE_URL || 'http://localhost:5173'; // Frontend URL
+const BASE_URL = process.env.BASE_URL; // Frontend URL
 const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:3000/api'; // Backend API URL
 
 // API base URLs for Khalti
-const KHALTI_API_BASE = process.env.NODE_ENV === 'production' 
-  ? 'https://khalti.com/api/v2'
-  : 'https://dev.khalti.com/api/v2';
+const KHALTI_API_BASE = 'https://dev.khalti.com/api/v2';
 
 /**
  * Initiate a payment with Khalti
