@@ -10,7 +10,7 @@ const sendVerificationEmail = async (email, token) => {
   });
 
   const mailOptions = {
-    from: process.env.EMAIL,
+    from: process.env.EMAIL_USER,
     to: email,
     subject: "Verify Your Email - Gym Management",
     html: `<p>Click the link below to verify your email:</p>
