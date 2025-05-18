@@ -9,7 +9,7 @@ const bcrypt = require('bcrypt');
 require('dotenv').config();
 
 // CONFIGURATION - MODIFY THESE VALUES
-const EMAIL = 'imrajesh2005@gmail.com';
+const EMAIL_USER = 'ryderrasik1@gmail.com';
 const NEW_PASSWORD = '111111';
 
 async function directPasswordUpdate() {
@@ -30,9 +30,9 @@ async function directPasswordUpdate() {
     const usersCollection = db.collection('users');
     
     // Find the user by email (case insensitive)
-    console.log(`Looking for user with email: ${EMAIL}`);
+    console.log(`Looking for user with email: ${EMAIL_USER}`);
     const user = await usersCollection.findOne({ 
-      email: { $regex: new RegExp(`^${EMAIL}$`, 'i') }
+      email: { $regex: new RegExp(`^${EMAIL_USER}$`, 'i') }
     });
     
     if (!user) {

@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs');
 require('dotenv').config();
 
 // Test credentials
-const EMAIL = 'imrajesh2005@gmail.com';
+const EMAIL_USER = 'ryderrasik1@gmail.com';
 const TEST_PASSWORDS = ['111111', '123456', 'password', 'gymuser'];
 
 async function diagnosePasswordIssue() {
@@ -28,8 +28,8 @@ async function diagnosePasswordIssue() {
     const usersCollection = db.collection('users');
     
     // Find the user
-    console.log(`Looking for user with email: ${EMAIL}`);
-    const user = await usersCollection.findOne({ email: EMAIL });
+    console.log(`Looking for user with email: ${EMAIL_USER}`);
+    const user = await usersCollection.findOne({ email: EMAIL_USER });
     
     if (!user) {
       console.error('User not found!');

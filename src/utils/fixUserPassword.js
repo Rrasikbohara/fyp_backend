@@ -9,7 +9,7 @@ const bcrypt = require('bcrypt');
 require('dotenv').config();
 
 // Email of the user to fix
-const EMAIL = 'imrajesh2005@gmail.com';
+const EMAIL_USER = 'ryderrasik@gmail.com';
 // New password to set
 const NEW_PASSWORD = '111111';
 
@@ -25,8 +25,8 @@ async function fixUserPassword() {
     const usersCollection = db.collection('users');
     
     // Find the user
-    console.log(`Looking for user with email: ${EMAIL}`);
-    const user = await usersCollection.findOne({ email: EMAIL });
+    console.log(`Looking for user with email: ${EMAIL_USER}`);
+    const user = await usersCollection.findOne({ email: EMAIL_USER });
     
     if (!user) {
       console.error('User not found!');
