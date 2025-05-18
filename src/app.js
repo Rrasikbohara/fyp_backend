@@ -55,7 +55,7 @@ app.use(morgan('combined', {
 }));
 
 app.use(cors({
-    origin: 'https://fyp-frontend-tawny.vercel.app/',
+    origin: ' http://localhost:5173/',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization']
